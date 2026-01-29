@@ -1,47 +1,124 @@
 ---
+slug: /
 sidebar_position: 1
+title: Introduction
 ---
 
-# Tutorial Intro
+# VROcean
 
-Let's discover **Docusaurus in less than 5 minutes**.
+A high-performance FFT-based ocean simulation system for Unity, optimized for Virtual Reality on Quest 3 and PC VR platforms.
 
-## Getting Started
+![VROcean Hero Images](./img/hero-showcase.png)
+*From left to right: Calm seas at dawn, Stormy conditions, Underwater view, Floating physics objects*
 
-Get started by **creating a new site**.
+## What is VROcean?
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+VROcean is a complete ocean rendering and simulation solution built on Unity's Data-Oriented Technology Stack (DOTS). It uses Fast Fourier Transform (FFT) algorithms running in Burst-compiled jobs to generate realistic, tileable ocean waves in real-time. The system includes a quadtree-based LOD renderer for efficient draw calls, multiple buoyancy components for floating objects, and VR-specific optimizations that maintain visual quality while hitting performance targets on standalone headsets.
 
-### What you'll need
+## Key Features
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+**Simulation**
+- Phillips spectrum wave generation with configurable wind parameters
+- Real-time FFT displacement and normal map generation
+- Adjustable resolution from 16x16 to 512x512
+- Seamless looping animation with configurable duration
 
-## Generate a new site
+**Rendering**
+- Quadtree LOD system with frustum culling
+- GPU instanced rendering for minimal draw calls
+- Subsurface scattering and foam generation
+- Detail normal layers for close-up ripples
+- Horizon skirting for infinite ocean appearance
 
-Generate a new Docusaurus site using the **classic template**.
+**VR Optimization**
+- Single-pass stereo instanced rendering
+- Mobile shader variant for Quest 3
+- Configurable quality presets (Low/Medium/High/Ultra)
+- Burst-compiled physics queries
 
-The classic template will automatically be added to your project after you run the command:
+**Buoyancy System**
+- Three buoyancy components for different use cases
+- CPU-accessible displacement data for water queries
+- Threaded sampling with configurable grid resolution
 
-```bash
-npm init docusaurus@latest my-website classic
+## Supported Platforms
+
+| Platform | Render Pipeline | Status |
+|----------|-----------------|--------|
+| Meta Quest 3 | URP | Fully supported |
+| Meta Quest 2 | URP | Supported (reduced settings) |
+| PC VR (SteamVR, Oculus) | URP | Fully supported |
+| Desktop (non-VR) | URP | Fully supported |
+
+**Requirements**
+- Unity 2022.3 LTS or newer
+- Universal Render Pipeline (URP)
+- Burst 1.8+ and Collections 2.1+ packages
+
+## Quick Look: Core API
+
+The central access point for VROcean is the `SceneSystem` singleton. Here are the most commonly used methods:
+
+### Query Ocean Height
+
+```csharp
+using PlatypusIdeas.VROcean.Runtime.Scripts.Scene;
+using Unity.Mathematics;
+
+// Get water height at a world position
+float3 position = new float3(10f, 0f, 25f);
+float waterHeight = SceneSystem.Instance.GetOceanHeight(position);
+
+// For choppy waves, use iterative sampling for accuracy
+float accurateHeight = SceneSystem.Instance.GetOceanHeightIterative(position, iterations: 4);
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Check If Underwater
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+```csharp
+bool isUnderwater = transform.position.y < SceneSystem.Instance.GetOceanHeight(transform.position);
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### Switch Environment Profile
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+```csharp
+using PlatypusIdeas.VROcean.Runtime.Scripts.Scene;
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+public AquaticBiomeProfile stormyProfile;
+
+void TriggerStorm()
+{
+    SceneSystem.Instance.SetProfile(stormyProfile);
+}
+```
+
+### Access Wind Data
+
+```csharp
+// Wind direction in degrees (0 = North, 90 = East)
+float windYaw = SceneSystem.Instance.WindYaw;
+
+// Wind as a Vector3 (includes speed from profile)
+Vector3 windVector = SceneSystem.Instance.WindVector;
+```
+
+## System Architecture
+
+VROcean consists of four main subsystems that work together:
+
+![Architecture Diagram](./img/architecture-overview.png)
+*VROcean system architecture showing data flow between components*
+
+| Component | Responsibility |
+|-----------|----------------|
+| `SceneSystem` | Singleton orchestrator managing all subsystems |
+| `OceanSimulator` | FFT simulation pipeline producing displacement and normal textures |
+| `SurfaceLodRenderer` | Quadtree traversal and instanced mesh rendering |
+| `AquaticBiomeProfile` | ScriptableObject storing wave, lighting, and material configuration |
+
+## Next Steps
+
+- [Installation](./getting-started/installation) - Import and configure the package
+- [Quick Setup](./getting-started/quick-setup) - Get a working ocean in 5 minutes
+- [First Floating Object](./getting-started/first-floating-object) - Add buoyancy to a GameObject
+- [VR Performance Guide](./optimization/vr-performance) - Optimize for Quest 3
