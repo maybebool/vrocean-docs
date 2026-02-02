@@ -8,7 +8,7 @@ title: Introduction
 
 A high-performance FFT-based ocean simulation system for Unity, optimized for Virtual Reality on Quest 3 and PC VR platforms.
 
-![VROcean Hero Images](./img/hero-showcase.png)
+![VROcean Hero Images](./img/hero-showcase.jpg)
 *From left to right: Calm seas at dawn, Stormy conditions, Underwater view, Floating physics objects*
 
 ## What is VROcean?
@@ -106,7 +106,7 @@ Vector3 windVector = SceneSystem.Instance.WindVector;
 
 VROcean consists of four main subsystems that work together:
 
-![Architecture Diagram](./img/architecture-overview.png)
+![Architecture Diagram](./img/architecture-overview.jpg)
 *VROcean system architecture showing data flow between components*
 
 | Component | Responsibility |

@@ -21,8 +21,6 @@ The `SceneSystem` is the central manager that coordinates all ocean components.
 2. Name it `OceanSystem`
 3. Add the `SceneSystem` component via `Add Component > Scripts > PlatypusIdeas > VROcean > Scene > SceneSystem`
 
-![SceneSystem Component](/img/quick-setup-scenesystem.png)
-*The SceneSystem component with its inspector fields*
 
 Alternatively, add it via code:
 
@@ -127,7 +125,7 @@ VROcean uses the scene's directional light for sun direction and color.
 
 Press Play. You should see animated ocean waves.
 
-![Working Ocean](/img/quick-setup-result.png)
+![Working Ocean](/img/quick-setup-result.jpg)
 *A working ocean scene with default settings*
 
 If you see a flat plane or no water, check the [Troubleshooting](#troubleshooting) section below.

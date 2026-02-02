@@ -105,8 +105,6 @@ Profiles are assigned to the `SceneSystem` component:
 1. Select the GameObject containing `SceneSystem`
 2. Drag your profile asset into the `Target Profile` field
 
-![Profile Assignment](/img/biome-profile-assignment.png)
-*Assigning a biome profile to SceneSystem*
 
 ## Switching Profiles at Runtime
 
