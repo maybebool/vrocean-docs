@@ -54,8 +54,6 @@ The color of foam on wave crests.
 Default: RGB(0.95, 0.95, 0.95) - Near white
 ```
 
-![Color Configuration](/img/visual-tuning-colors.png)
-*Left: Cool deep colors. Right: Warm tropical colors.*
 
 ## Surface Properties
 
@@ -137,9 +135,6 @@ Default: 10.0
 
 UV scale for the foam texture. Higher values create smaller, more detailed foam patterns.
 
-![Foam Settings](/img/visual-tuning-foam.png)
-*Left: Low threshold, high foam coverage. Right: High threshold, foam only on peaks.*
-
 ## Subsurface Scattering
 
 Subsurface scattering (SSS) simulates light passing through thin parts of waves, creating the characteristic glow seen in ocean swells.
@@ -197,8 +192,6 @@ Default: 1.0
 
 How much wave height affects SSS intensity. Higher waves have thinner crests that transmit more light.
 
-![Subsurface Scattering](/img/visual-tuning-sss.png)
-*Subsurface scattering visible on backlit wave crests*
 
 ## Fresnel
 

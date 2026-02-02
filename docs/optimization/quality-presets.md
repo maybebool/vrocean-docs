@@ -30,9 +30,6 @@ The grid resolution of each rendered ocean patch.
 
 Higher vertex counts create smoother wave surfaces but increase GPU vertex processing cost.
 
-![Vertex Density Comparison](/img/quality-presets-vertices.png)
-*Left: 16 vertices (Low). Center: 32 vertices (Medium). Right: 64 vertices (High). Close-up view showing mesh density.*
-
 ### LOD Threshold
 
 Controls when patches subdivide based on camera distance.
@@ -49,9 +46,6 @@ Subdivision occurs when: cameraDistance < (patchSize * LODThreshold)
 | 1.0 | Subdivide aggressively (maximum patches, highest quality) |
 
 Lower threshold values increase detail at distance but render more patches.
-
-![LOD Threshold Comparison](/img/quality-presets-lod.png)
-*Top: LOD Threshold 2.0 (fewer subdivisions). Bottom: LOD Threshold 1.0 (more subdivisions). Wireframe overlay showing patch boundaries.*
 
 ### Cull Scale
 

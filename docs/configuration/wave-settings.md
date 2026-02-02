@@ -26,8 +26,6 @@ The primary driver of wave height and energy. Higher wind speeds produce larger,
 | 21 - 40 | Storm conditions |
 | 41 - 64 | Extreme conditions (hurricane-force) |
 
-![Wind Speed Comparison](/img/wave-settings-windspeed.png)
-*Left: Wind Speed 4 (calm). Center: Wind Speed 12 (moderate). Right: Wind Speed 28 (stormy).*
 
 ```csharp
 // Access wind speed from active profile
@@ -51,8 +49,6 @@ Controls the directional spreading of waves relative to wind direction.
 
 Low values create a chaotic, confused sea state. High values create organized wave trains moving in a clear direction.
 
-![Wind Alignment Comparison](/img/wave-settings-alignment.png)
-*Left: Alignment 0.1 (chaotic). Right: Alignment 0.9 (directional).*
 
 ### Choppiness
 
@@ -114,8 +110,6 @@ The world-space size of the wave pattern before it tiles. This affects both visu
 
 Smaller values show more wave detail but tiling becomes visible at distance. Larger values hide tiling but waves appear broader and less detailed.
 
-![Wave Pattern Size Comparison](/img/wave-settings-patternsize.png)
-*Left: Pattern Size 32 (visible tiling at horizon). Right: Pattern Size 128 (minimal tiling).*
 
 The pattern size also affects water queries:
 

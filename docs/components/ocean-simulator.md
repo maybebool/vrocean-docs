@@ -20,9 +20,6 @@ OceanSimulator implements a six-stage simulation pipeline:
 
 The output is two textures updated each frame: a displacement map and a normal/foam map.
 
-![FFT Pipeline](/img/ocean-simulator-pipeline.png)
-*The six-stage FFT simulation pipeline*
-
 ## Adding to Scene
 
 1. Create a GameObject as a child of your ocean system root
@@ -43,8 +40,6 @@ simulator.Profile = myBiomeProfile;
 
 ## Inspector Fields
 
-![OceanSimulator Inspector](/img/ocean-simulator-inspector.png)
-*OceanSimulator component in the Inspector*
 
 | Field | Type | Description |
 |-------|------|-------------|

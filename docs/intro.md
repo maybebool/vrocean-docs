@@ -4,16 +4,19 @@ sidebar_position: 1
 title: Introduction
 ---
 
-# VROcean
+# VR Ocean
 
 A high-performance FFT-based ocean simulation system for Unity, optimized for Virtual Reality on Quest 3 and PC VR platforms.
 
-![VROcean Hero Images](./img/hero-showcase.jpg)
-*From left to right: Calm seas at dawn, Stormy conditions, Underwater view, Floating physics objects*
+<!-- ![VROcean Hero Images](.static/img/hero-showcase.jpg)
+*From left to right: Calm seas at dawn, Stormy conditions, Underwater view, Floating physics objects* -->
 
-## What is VROcean?
+<a href={require('@site/static/img/hero-showcase.jpg').default} target="_blank">
+  <img src={require('@site/static/img/hero-showcase.jpg').default} alt="Target Follow Inspector" width="500" />
+</a>
+## What is VR Ocean?
 
-VROcean is a complete ocean rendering and simulation solution built on Unity's Data-Oriented Technology Stack (DOTS). It uses Fast Fourier Transform (FFT) algorithms running in Burst-compiled jobs to generate realistic, tileable ocean waves in real-time. The system includes a quadtree-based LOD renderer for efficient draw calls, multiple buoyancy components for floating objects, and VR-specific optimizations that maintain visual quality while hitting performance targets on standalone headsets.
+VR Ocean is a complete ocean rendering and simulation solution built on Unity's Data-Oriented Technology Stack (DOTS). It uses Fast Fourier Transform (FFT) algorithms running in Burst-compiled jobs to generate realistic, tileable ocean waves in real-time. The system includes a quadtree-based LOD renderer for efficient draw calls, multiple buoyancy components for floating objects, and VR-specific optimizations that maintain visual quality while hitting performance targets on standalone headsets.
 
 ## Key Features
 
@@ -106,8 +109,10 @@ Vector3 windVector = SceneSystem.Instance.WindVector;
 
 VROcean consists of four main subsystems that work together:
 
-![Architecture Diagram](./img/architecture-overview.jpg)
-*VROcean system architecture showing data flow between components*
+
+<a href={require('@site/static/img/architecture-overview.jpg').default} target="_blank">
+  <img src={require('@site/static/img/architecture-overview.jpg').default} alt="Target Follow Inspector" width="500" />
+</a>
 
 | Component | Responsibility |
 |-----------|----------------|

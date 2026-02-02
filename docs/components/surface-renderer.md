@@ -247,9 +247,6 @@ public enum AdjacentLodFlags
 
 Each variant has adjusted edge triangulation that matches the coarser neighbor.
 
-![Seam Stitching](/img/surface-renderer-seams.png)
-*Left: T-junction artifacts without stitching. Right: Clean seams with stitching.*
-
 ## Horizon Skirting
 
 Beyond the detailed LOD region, the renderer draws simple quad strips extending to the horizon. This creates the illusion of infinite ocean without the cost of rendering distant patches.

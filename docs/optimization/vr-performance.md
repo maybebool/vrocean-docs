@@ -100,9 +100,6 @@ The FFT resolution has the largest impact on CPU performance.
 #endif
 ```
 
-![Resolution Comparison](/img/vr-performance-resolution.png)
-*Left: 64x64 resolution. Right: 128x128 resolution. Difference is subtle at typical VR viewing distances.*
-
 ### Wave Pattern Size
 
 Larger pattern sizes can hide low resolution:
@@ -180,8 +177,6 @@ material.SetFloat("_DetailFadeDistance", 15f); // Default 30
 
 Enable `VR_MOBILE_MODE` in the ocean material for significant GPU savings:
 
-![Mobile Mode Toggle](/img/vr-performance-mobile-mode.png)
-*Enable Performance Mode in the ocean material*
 
 **Features disabled by VR Mobile Mode:**
 - Detail normal mapping

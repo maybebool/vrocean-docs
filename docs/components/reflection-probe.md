@@ -32,9 +32,6 @@ Corrected Reflection = ReorientationMatrix * Raw Reflection Direction
 4. Configure and bake the reflection probe
 5. Reference the probe in `SceneSystem`
 
-![Reflection Probe Setup](/img/reflection-probe-setup.png)
-*GameObject with both ReflectionProbe and BakedReflectionProbe components*
-
 ## Inspector Fields
 
 The `BakedReflectionProbe` component has no exposed inspector fields. It operates automatically based on the GameObject's transform.
@@ -204,8 +201,6 @@ Exclude:
 - Small dynamic objects
 - Particles
 
-![Reflection Probe Settings](/img/reflection-probe-settings.png)
-*Recommended ReflectionProbe settings for ocean use*
 
 ## Performance Considerations
 

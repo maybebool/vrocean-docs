@@ -112,8 +112,6 @@ Clouds are generated from a 3D noise texture for volumetric appearance.
 | Cloud Edge | Softness of cloud boundaries |
 | Cloud Contrast | Sharpness of cloud definition |
 
-![Day Sky Clouds](/img/skybox-day-clouds.png)
-*Procedural 3D clouds with light scattering*
 
 ### Fog
 
@@ -310,8 +308,6 @@ Fog Opacity: 0.6
 Fog Height: 3.0
 ```
 
-![Skybox Presets](/img/skybox-presets.png)
-*Top row: Clear Day, Overcast, Sunset. Bottom row: Clear Night, Stormy.*
 
 ## Performance Considerations
 
