@@ -343,6 +343,5 @@ However, for moving cameras or dynamic scenes, the component is recommended.
 
 ## Next Steps
 
-- [SceneSystem](./scene-system) - Probe management methods
 - [Visual Tuning](../configuration/visual-tuning) - Reflection shader settings
 - [VR Performance](../optimization/vr-performance) - Optimization strategies

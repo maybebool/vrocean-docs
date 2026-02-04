@@ -12,11 +12,11 @@ const config: Config = {
   },
 
   // Update these for your GitHub Pages deployment
-  url: 'https://platypusideas.github.io',
+  url: 'https://maybebool.github.io',
   baseUrl: '/vrocean-docs/',
 
   // GitHub pages deployment config
-  organizationName: 'platypusideas',
+  organizationName: 'maybebool', // Usually your GitHub org/user name.
   projectName: 'vrocean-docs',
 
   onBrokenLinks: 'throw',
@@ -89,7 +89,7 @@ const config: Config = {
             },
             {
               label: 'Components',
-              to: '/docs/components/scene-system',
+              to: '/docs/components/ocean-simulator',
             },
           ],
         },

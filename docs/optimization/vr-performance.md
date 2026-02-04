@@ -510,5 +510,4 @@ void ConfigureForHighEndPCVR()
 ## Next Steps
 
 - [Quality Presets](./quality-presets) - Detailed preset configuration
-- [Mobile Mode](./mobile-mode) - Shader simplification details
 - [Wave Settings](../configuration/wave-settings) - Comfort-focused configuration

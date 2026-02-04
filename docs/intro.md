@@ -12,7 +12,7 @@ A high-performance FFT-based ocean simulation system for Unity, optimized for Vi
 *From left to right: Calm seas at dawn, Stormy conditions, Underwater view, Floating physics objects* -->
 
 <a href={require('@site/static/img/hero-showcase.jpg').default} target="_blank">
-  <img src={require('@site/static/img/hero-showcase.jpg').default} alt="Target Follow Inspector" width="500" />
+  <img src={require('@site/static/img/hero-showcase.jpg').default} alt="Target Follow Inspector" width="900" />
 </a>
 ## What is VR Ocean?
 
@@ -54,7 +54,7 @@ VR Ocean is a complete ocean rendering and simulation solution built on Unity's 
 | Desktop (non-VR) | URP | Fully supported |
 
 **Requirements**
-- Unity 2022.3 LTS or newer
+- Unity 6000.0.58f2 LTS or newer
 - Universal Render Pipeline (URP)
 - Burst 1.8+ and Collections 2.1+ packages
 

@@ -449,6 +449,5 @@ View in Unity Profiler under "Scripts".
 
 ## Next Steps
 
-- [SceneSystem](./scene-system) - Orchestration component
 - [Ocean Simulator](./ocean-simulator) - FFT simulation
 - [Quality Presets](../optimization/quality-presets) - Detailed preset tuning

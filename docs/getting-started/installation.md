@@ -11,13 +11,15 @@ This guide covers importing VROcean into your Unity project and verifying the in
 
 Before installing VROcean, ensure your project meets these requirements:
 
-| Requirement | Minimum Version | Recommended |
-|-------------|-----------------|-------------|
-| Unity | 2022.3 LTS | 2022.3.20f1+ |
-| Render Pipeline | URP 14.0 | URP 14.0.8+ |
-| Burst | 1.8.0 | 1.8.8+ |
+| Requirement  Recommended |
+|-------------|-----------------|
+| Unity | 6000.0.58f2+ |
+| Render Pipeline | URP 17.0+ |
+| Burst | 1.8.0+ |
 | Collections | 2.1.0 | 2.2.0+ |
-| Mathematics | 1.2.0 | 1.3.1+ |
+| Mathematics | 1.3.0+ |
+| XR Interaction Toolkit | 3.1.0+ |
+| OpenXR Plugin | 1.15.0+ |
 
 VROcean requires the Universal Render Pipeline (URP). It is not compatible with the Built-in Render Pipeline or HDRP.
 

@@ -441,5 +441,4 @@ public class CustomWaterSampler : MonoBehaviour
 ## Next Steps
 
 - [Surface Renderer](./surface-renderer) - LOD mesh rendering
-- [SceneSystem](./scene-system) - Orchestration component
 - [VR Performance](../optimization/vr-performance) - Resolution guidelines

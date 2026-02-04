@@ -131,8 +131,6 @@ Each floating object needs its own buoyancy component. For scenes with many floa
 gameObject.AddComponent<ThreadedPhysicBasedObjectFloatation>();
 ```
 
-See [Buoyancy Overview](../buoyancy/overview) for guidance on choosing the right component.
-
 ## Code Example: Spawning Floating Debris
 
 ```csharp
@@ -230,9 +228,3 @@ This approach is more performant but does not simulate realistic physics interac
 - Switch to `ThreadedPhysicBasedObjectFloatation` for Burst-compiled sampling
 - Reduce the number of floating objects
 - See [VR Performance Guide](../optimization/vr-performance)
-
-## Next Steps
-
-- [Buoyancy Overview](../buoyancy/overview) - Compare all buoyancy components
-- [Physics-Based Buoyancy](../buoyancy/physics-based) - Detailed parameter reference
-- [Water Queries](../buoyancy/water-queries) - Direct water height sampling API

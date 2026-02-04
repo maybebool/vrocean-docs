@@ -406,5 +406,4 @@ Is this for Quest standalone?
 ## Next Steps
 
 - [VR Performance](./vr-performance) - Platform-specific optimization
-- [Mobile Mode](./mobile-mode) - Shader simplification
 - [Surface Renderer](../components/surface-renderer) - Component reference

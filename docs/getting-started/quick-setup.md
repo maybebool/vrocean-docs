@@ -19,7 +19,7 @@ The `SceneSystem` is the central manager that coordinates all ocean components.
 
 1. Create an empty GameObject in your scene
 2. Name it `OceanSystem`
-3. Add the `SceneSystem` component via `Add Component > Scripts > PlatypusIdeas > VROcean > Scene > SceneSystem`
+3. Add the `SceneSystem` component
 
 
 Alternatively, add it via code:
@@ -45,6 +45,7 @@ The `OceanSimulator` generates wave displacement and normal textures using FFT.
 1. Create a child GameObject under `OceanSystem`
 2. Name it `OceanSimulator`
 3. Add the `OceanSimulator` component
+4. Add the `SurfaceLodRenderer` component
 
 Your hierarchy should look like this:
 
@@ -53,23 +54,7 @@ OceanSystem
 └── OceanSimulator
 ```
 
-## Step 3: Create the Surface Renderer
-
-The `SurfaceLodRenderer` handles the quadtree mesh and rendering.
-
-1. Create another child GameObject under `OceanSystem`
-2. Name it `SurfaceRenderer`
-3. Add the `SurfaceLodRenderer` component
-
-Updated hierarchy:
-
-```
-OceanSystem
-└── OceanSimulator
-└── SurfaceRenderer
-```
-
-## Step 4: Create a Biome Profile
+## Step 3: Create a Biome Profile
 
 The `AquaticBiomeProfile` stores all configuration for waves, lighting, and materials.
 
@@ -90,7 +75,17 @@ The `AquaticBiomeProfile` stores all configuration for waves, lighting, and mate
 1. Locate an included skybox material (e.g., `M_DaySky.mat` or `M_NightSky.mat`)
 2. Drag it into the `Skybox Material` field
 
-## Step 5: Wire Up the Components
+## Step 4: Create a Post Processing Volume 
+1. Create an empty child gameobject under SceneSystem.
+2. Name it PostProcessVolume. Or whatever you like.
+2. Add a `Volume` component. 
+
+## Step 5: Create a Reflection Probe
+1. Create an empty child gameobject under SceneSystem.
+2. Name it BakedReflectionProbe. Or whatever you like.
+2. Add a `Reflection Probe` component. 
+ 
+## Step 6: Wire Up the Components
 
 Now connect everything in the `SceneSystem` inspector:
 
@@ -103,7 +98,7 @@ Now connect everything in the `SceneSystem` inspector:
 ![SceneSystem Wired](/img/quick-setup-wired.png)
 *SceneSystem with all references assigned*
 
-## Step 6: Configure the Surface Renderer
+## Step 7: Configure the Surface Renderer
 
 Select the `SurfaceRenderer` GameObject and configure:
 
@@ -113,7 +108,7 @@ Select the `SurfaceRenderer` GameObject and configure:
 | Ocean Size | 1024 (default, adjust as needed) |
 | Quality | Medium (good starting point) |
 
-## Step 7: Add Lighting
+## Step 9: Add Lighting
 
 VROcean uses the scene's directional light for sun direction and color.
 
@@ -121,12 +116,17 @@ VROcean uses the scene's directional light for sun direction and color.
 2. Position and rotate it to your desired sun angle
 3. The biome profile's `Solar Config` section can override these settings
 
-## Step 8: Enter Play Mode
+## Step 9: VR Camera
+1. Locate the prefab `VR_Player_Camera` at `Assets/PlatypusIdeas/VROcean/Samples/Prefabs`
+2. Delete the default camera in your scene
+3. Drag and drop the `VR_Player_Camera` int othe scene
+
+## Step 10: Enter Play Mode
 
 Press Play. You should see animated ocean waves.
 
 ![Working Ocean](/img/quick-setup-result.jpg)
-*A working ocean scene with default settings*
+*A working ocean scene from a demo Scene*
 
 If you see a flat plane or no water, check the [Troubleshooting](#troubleshooting) section below.
 
@@ -138,11 +138,23 @@ Your final hierarchy should look like this:
 Scene
 ├── OceanSystem
 │   ├── OceanSimulator
-│   └── SurfaceRenderer
+│   └── PostProcessVolume
+│   └── BakedReflectionProbe
 ├── Directional Light
-└── Main Camera
+└── VR_Player_Camera
 ```
 
+
+## Using the Prefab (Recommended)
+
+VROcean includes a pre-configured prefab for faster setup:
+
+1. Navigate to `Assets/PlatypusIdeas/VROcean/Samples/Prefabs/`
+2. Drag `OceanBiomeManager.prefab` into your scene
+3. Assign your biome profile to the `SceneSystem` component
+4. Enter Play Mode
+
+The `OceanBiomeManager` prefab has all components pre-wired.
 ## Minimal Code Setup
 
 If you prefer setting up via code, here is a complete example:
@@ -180,17 +192,6 @@ public class OceanBootstrap : MonoBehaviour
     }
 }
 ```
-
-## Using the Prefab (Recommended)
-
-VROcean includes a pre-configured prefab for faster setup:
-
-1. Navigate to `Assets/PlatypusIdeas/VROcean/Runtime/Prefabs/`
-2. Drag `OceanSystem.prefab` into your scene
-3. Assign your biome profile to the `SceneSystem` component
-4. Enter Play Mode
-
-This prefab has all components pre-wired and configured with sensible defaults.
 
 ## Adjusting Wave Settings
 
