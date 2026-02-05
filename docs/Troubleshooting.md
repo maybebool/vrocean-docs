@@ -54,8 +54,8 @@ This issue is typically caused by URP rendering settings that need to be configu
 
 For reference, here are the recommended settings for all three configuration panels:
 
-| Graphics Settings | Quality Settings | Renderer Data Settings |
-|-------------------|------------------|------------------------|
-| ![Optimal Graphics](/img/Pipleline Asset.png) | ![Optimal Quality](/img/Quality.png) | ![Optimal Renderer](/img/Quality.png) |
+| Quality Settings | Renderer Data Settings |
+|------------------|------------------------|
+|[![Optimal Renderer](/img/QualityFull.png)](/img/QualityFull.png) | [![Optimal Graphics](/img/PipelineAsset.png)](/img/PipelineAsset.png)   |
 
 After applying these settings, your ocean should display correctly with proper lighting and reflections.

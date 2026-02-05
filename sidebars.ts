@@ -40,7 +40,7 @@ const sidebars: SidebarsConfig = {
         'optimization/quality-presets',
       ],
     },
-    'troubleshooting',
+    'Troubleshooting',
   ],
 };
 
