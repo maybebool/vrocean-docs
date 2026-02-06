@@ -11,7 +11,7 @@ This guide covers importing VROcean into your Unity project and verifying the in
 
 Before installing VROcean, ensure your project meets these requirements:
 
-| Requirement  Recommended |
+| Requirement | Recommended |
 |-------------|-----------------|
 | Unity | 6000.0.58f2+ |
 | Render Pipeline | URP 17.0+ |
