@@ -62,13 +62,13 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://assetstore.unity.com/',
+          href: 'https://assetstore.unity.com/packages/3d/environments/vr-ocean-high-performance-ocean-simulation-for-vr-360004',
           label: 'Asset Store',
           position: 'right',
         },
         {
-          href: 'https://github.com/platypusideas/vrocean',
-          label: 'GitHub',
+          href: 'https://www.platypus-ideas.com/cv-projects/vr-ocean',
+          label: 'Website',
           position: 'right',
         },
       ],
@@ -98,11 +98,7 @@ const config: Config = {
           items: [
             {
               label: 'Unity Asset Store',
-              href: 'https://assetstore.unity.com/packages/tools/behavior-ai/air-path-348028',
-            },
-            {
-              label: 'Platypus Ideas',
-              href: 'https://platypus-ideas.com/',
+              href: 'https://assetstore.unity.com/packages/3d/environments/vr-ocean-high-performance-ocean-simulation-for-vr-360004',
             },
           ],
         },
